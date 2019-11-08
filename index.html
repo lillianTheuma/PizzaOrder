@@ -79,30 +79,40 @@
                 <h2>Our Menu</h2>
               </div>
               <div class="card-body">
-                <h4> Crusts </h4>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Traditional</li>
-                  <li class="list-group-item">Stuffed Crust</li>
-                  <li class="list-group-item">Gluten Free</li>
-                </ul> <!-- class = list-group list-group-flush -->
-                <h4> Sauces </h4>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Tomato and Basil Sauce</li>
-                  <li class="list-group-item">Barbeque Sauce</li>
-                  <li class="list-group-item">Alfredo Sauce</li>
-                </ul> <!-- class = list-group list-group-flush -->
-                <h4> Cheeses </h4>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Cheddar</li>
-                  <li class="list-group-item">Mozzarella</li>
-                  <li class="list-group-item">Parmesan Regannio</li>
-                </ul> <!-- class = list-group list-group-flush -->
-                <h4> Toppings </h4>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Pepperoni</li>
-                  <li class="list-group-item">Metal Scraps</li>
-                  <li class="list-group-item">Oreo Cookies</li>
-                </ul> <!-- class = list-group list-group-flush -->
+                <form id="pizza">
+                  <h4> Crusts </h4>
+                  <ul class="list-group list-group-flush">
+                    <select class="form-control" id="beverage">
+                      <option>Traditional</option>
+                      <option>Stuffed Crust</option>
+                      <option>Gluten Free</option>
+                    </select>
+                  </ul> <!-- class = list-group list-group-flush -->
+                  <h4> Sauces </h4>
+                  <ul class="list-group list-group-flush">
+                    <select class="form-control" id="beverage">
+                      <option>Tomato</option>
+                      <option>Barbeque</option>
+                      <option>Alfredo</option>
+                    </select>
+                  </ul> <!-- class = list-group list-group-flush -->
+                  <h4> Cheeses </h4>
+                  <ul class="list-group list-group-flush">
+                    <select class="form-control" id="beverage">
+                      <option>Regular Cheese</option>
+                      <option>Light Cheese</option>
+                      <option>Extra Cheese</option>
+                      <option>Three Cheese Blend</option>
+                    </select>
+                  </ul> <!-- class = list-group list-group-flush -->
+                  <h4> Toppings </h4>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><input type="checkbox" name="topping0" value=0> Pepperoni</li>
+                    <li class="list-group-item"><input type="checkbox" name="topping1" value=1> Mushrooms</li>
+                      <li class="list-group-item"><input type="checkbox" name="topping2" value=2> Bacon</li>
+                    <li class="list-group-item"><input type="checkbox" name="topping3" value=3> Pineapple</li>
+                  </ul> <!-- class = list-group list-group-flush -->
+                </form>
               </div> <!-- class = card-body -->
             </div> <!-- class = card -->
           </div> <!-- class="card-group" -->
@@ -117,17 +127,17 @@
             <div class="card-body">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item text-center"><h2>PIZZA</li>
-                <li class="list-group-item"><a href="#">Order</a></li>
-                <li class="list-group-item"><a href="#">Shopping Cart</a></li>
-                <li class="list-group-item"><a href="#">Checkout</a></li>
-                <li class="list-group-item"><a href="#">Find A Store</a></li>
-              </ul> <!-- class= list-group list-group-flush -->
-            </div> <!-- class = card-body -->
-          </div> <!-- class = card -->
-        </div> <!-- class = col-md-3 -->
-      </div> <!-- class = row -->
+                  <li class="list-group-item"><a href="#">Order</a></li>
+                  <li class="list-group-item"><a href="#">Shopping Cart</a></li>
+                  <li class="list-group-item"><a href="#">Checkout</a></li>
+                  <li class="list-group-item"><a href="#">Find A Store</a></li>
+                </ul> <!-- class= list-group list-group-flush -->
+              </div> <!-- class = card-body -->
+            </div> <!-- class = card -->
+          </div> <!-- class = col-md-3 -->
+        </div> <!-- class = row -->
 
-    </div> <!-- class = body -->
-  </div> <!-- class = container -->
-</body>
-</html>
+      </div> <!-- class = body -->
+    </div> <!-- class = container -->
+  </body>
+  </html>
