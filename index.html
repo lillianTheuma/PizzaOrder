@@ -40,10 +40,10 @@
             <a class="nav-link disabled" href="#">Disabled</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Total: $452.05</a>
+            <a class="nav-link" id="price" href="#">Total: $0</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Items: 5</a>
+            <a class="nav-link" id="items" href="#">Items: 0</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -80,38 +80,47 @@
               </div>
               <div class="card-body">
                 <form id="pizza">
+                  <h4> Size </h4>
+                  <ul class="list-group list-group-flush">
+                    <select class="form-control" id="size">
+                      <option>Small ($5)</option>
+                      <option>Medium ($7)</option>
+                      <option>Large ($10)</option>
+                    </select>
+                  </ul> <!-- class = list-group list-group-flush -->
                   <h4> Crusts </h4>
                   <ul class="list-group list-group-flush">
-                    <select class="form-control" id="beverage">
-                      <option>Traditional</option>
-                      <option>Stuffed Crust</option>
-                      <option>Gluten Free</option>
+                    <select class="form-control" id="crust">
+                      <option>Traditional (+$0)</option>
+                      <option>Stuffed Crust (+$2)</option>
+                      <option>Gluten Free (+$0)</option>
                     </select>
                   </ul> <!-- class = list-group list-group-flush -->
                   <h4> Sauces </h4>
                   <ul class="list-group list-group-flush">
-                    <select class="form-control" id="beverage">
-                      <option>Tomato</option>
-                      <option>Barbeque</option>
-                      <option>Alfredo</option>
+                    <select class="form-control" id="sauce">
+                      <option>Tomato (+$1)</option>
+                      <option>Barbeque (+$42)</option>
+                      <option>Alfredo (+$4)</option>
                     </select>
                   </ul> <!-- class = list-group list-group-flush -->
                   <h4> Cheeses </h4>
                   <ul class="list-group list-group-flush">
-                    <select class="form-control" id="beverage">
-                      <option>Regular Cheese</option>
-                      <option>Light Cheese</option>
-                      <option>Extra Cheese</option>
-                      <option>Three Cheese Blend</option>
+                    <select class="form-control" id="cheese">
+                      <option>Regular Cheese (+$0)</option>
+                      <option>Light Cheese (+$0)</option>
+                      <option>Extra Cheese (+$3)</option>
+                      <option>Three Cheese Blend (+$3)</option>
                     </select>
                   </ul> <!-- class = list-group list-group-flush -->
                   <h4> Toppings </h4>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><input type="checkbox" name="topping0" value=0> Pepperoni</li>
-                    <li class="list-group-item"><input type="checkbox" name="topping1" value=1> Mushrooms</li>
-                      <li class="list-group-item"><input type="checkbox" name="topping2" value=2> Bacon</li>
-                    <li class="list-group-item"><input type="checkbox" name="topping3" value=3> Pineapple</li>
+                    <li class="list-group-item"><input type="checkbox" id="topping0" name="topping0" value=0> Pepperoni</li>
+                    <li class="list-group-item"><input type="checkbox" id="topping1" name="topping1" value=1> Mushrooms</li>
+                      <li class="list-group-item"><input type="checkbox" id="topping2" name="topping2" value=2> Bacon</li>
+                    <li class="list-group-item"><input type="checkbox" id="topping3" name="topping3" value=3> Pineapple</li>
                   </ul> <!-- class = list-group list-group-flush -->
+                  <button type="submit" class="btn btn-warning text-center">Add to Cart</button>
                 </form>
               </div> <!-- class = card-body -->
             </div> <!-- class = card -->
