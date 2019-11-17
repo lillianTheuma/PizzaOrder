@@ -76,6 +76,12 @@ $(document).ready(function() {
     var toppings = [$("input#topping0").val(),$("#topping1").val(),$("#topping2").val(),$("#topping3").val()];
     var pizza = new Pizza(size, crusts, sauce, cheese, toppings);
     orders.addPizza(pizza);
+    $("#pizzas").append("<h3 class='dropdown-item'> Pizza "+(pizza.id+1)+"</h3>");
+    $("#pizzas").append("<p class='dropdown-item'> Size: "+pizza.size+"</p>");
+    $("#pizzas").append("<p class='dropdown-item'> Crust: "+pizza.crust+"</p>");
+    $("#pizzas").append("<p class='dropdown-item'> Sauce: "+pizza.sauce+"</p>");
+    $("#pizzas").append("<p class='dropdown-item'> Cheese: "+pizza.cheese+"</p>");
+
     $("#price").html("Total: $"+orders.totalPrice);
     $("#items").html("Items: "+orders.currentOrder);
     console.log(orders);
