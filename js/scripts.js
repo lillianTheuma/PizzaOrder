@@ -63,11 +63,13 @@ Pizza.prototype.setPrice = function() { // Sets the price of a pizza based on th
       this.price+=3;
       break;
   }
+  let toppings = 0;
   this.toppings.forEach(function(topping) {
     if (topping) {
-      this.price += 1;
+      toppings += 2;
     }
   });
+  this.price+=(toppings);
 }
 // Below are test cases for debugging, they will be deleted
   var orders = new OrderList();
@@ -90,7 +92,7 @@ $(document).ready(function() {
     orders.addPizza(pizza);
     $("#pizzas").html("");
     orders.pizzas.forEach(function(pizza) {
-      $("#pizzas").append("<h3 class='dropdown-item'> Pizza "+(pizza.id+1)+"</h3>");
+      $("#pizzas").append("<h3 class='dropdown-item'> Pizza "+(pizza.id+1)+" - $"+(pizza.price)+"</h3>");
       $("#pizzas").append("<p class='dropdown-item'> Size: "+pizza.size+"</p>");
       $("#pizzas").append("<p class='dropdown-item'> Crust: "+pizza.crust+"</p>");
       $("#pizzas").append("<p class='dropdown-item'> Sauce: "+pizza.sauce+"</p>");
@@ -106,11 +108,7 @@ $(document).ready(function() {
       });
       $("#pizzas").append("</p>")
     });
-
     $("#price").html("Total: $"+orders.totalPrice);
     $("#items").html("Items: "+orders.currentOrder);
-    console.log(orders);
-    console.log(pizza);
-    console.log(fixedToppings);
   })
 })
