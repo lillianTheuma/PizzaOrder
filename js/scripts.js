@@ -88,11 +88,24 @@ $(document).ready(function() {
     });
     var pizza = new Pizza(size, crusts, sauce, cheese, fixedToppings);
     orders.addPizza(pizza);
-    $("#pizzas").append("<h3 class='dropdown-item'> Pizza "+(pizza.id+1)+"</h3>");
-    $("#pizzas").append("<p class='dropdown-item'> Size: "+pizza.size+"</p>");
-    $("#pizzas").append("<p class='dropdown-item'> Crust: "+pizza.crust+"</p>");
-    $("#pizzas").append("<p class='dropdown-item'> Sauce: "+pizza.sauce+"</p>");
-    $("#pizzas").append("<p class='dropdown-item'> Cheese: "+pizza.cheese+"</p>");
+    $("#pizzas").html("");
+    orders.pizzas.forEach(function(pizza) {
+      $("#pizzas").append("<h3 class='dropdown-item'> Pizza "+(pizza.id+1)+"</h3>");
+      $("#pizzas").append("<p class='dropdown-item'> Size: "+pizza.size+"</p>");
+      $("#pizzas").append("<p class='dropdown-item'> Crust: "+pizza.crust+"</p>");
+      $("#pizzas").append("<p class='dropdown-item'> Sauce: "+pizza.sauce+"</p>");
+      $("#pizzas").append("<p class='dropdown-item'> Cheese: "+pizza.cheese+"</p>");
+      pizza.toppings.forEach(function(topping, i){
+        if (i == 0) {
+          $("#pizzas").append("<p class='dropdown-item'> Toppings: ");
+        }
+        let toppings = ["Pepperoni","Mushrooms","Bacon","Pineapple"];
+        if (topping) {
+          $("#pizzas").append(toppings[i]+" ");
+        }
+      });
+      $("#pizzas").append("</p>")
+    });
 
     $("#price").html("Total: $"+orders.totalPrice);
     $("#items").html("Items: "+orders.currentOrder);
