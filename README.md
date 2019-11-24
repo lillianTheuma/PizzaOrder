@@ -1,5 +1,5 @@
 # PizzaOrder - Lillian Theuma
-This portfolio is presented as a solution to the project guidelines described in
+This portfolio is presented as a solution to the project guidelines described in https://epicenter.epicodus.com/courses/459/code_reviews/1947 .
 
 # TABLE OF CONTENTS
 ```
