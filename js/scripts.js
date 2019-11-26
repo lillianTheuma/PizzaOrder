@@ -29,7 +29,6 @@ function Pizza(size, crust, sauce, cheese, toppings) { // Constructor. This is t
 Pizza.prototype.setPrice = function() { // Sets the price of a pizza based on the size of the pizza, and toppings selected.
   switch(this.size){
     case "Small ($5)":
-      console.log("is small!");
       this.price+= 5;
       break;
     case "Medium ($7)":
