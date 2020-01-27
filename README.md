@@ -17,7 +17,7 @@ This portfolio is presented as a solution to the project guidelines described in
 - License Information
 ```
 ## Repository
-* This project can be found at https://github.com/lillianTheuma/Portfolio
+* This project can be found at https://github.com/lillianTheuma/PizzaOrder
 
 ## Requirements
 * A FTP server
